@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		Feedback Form
+	</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+</head>
+<body>
+	<h1 align="center">Feedback Form</h1>
+	<br>
+</body>
+<div class="wrapper">
+	<p>Please rate your overall experience with our application as follows:</p>
+	<form>
+	<div class="input_field">
+		<label class="radio-inline"><input type="radio" name="experience" id="Excellent" onblur="validate()"> Excellent</label>
+		<label class="radio-inline"><input type="radio" name="experience" id="Good" onblur="validate()"> Good</label>
+		<label class="radio-inline"><input type="radio" name="experience" id="Needs Improvement" onblur="validate()"> Needs Improvement</label>
+	</div>
+	<div class="input_field">
+		<input type="text" placeholder="Name" id="name" onblur="validate()">
+	</div>
+	<div class="input_field">
+		<input type="text" placeholder="Subject" id="subject" onblur="validate()">
+	</div>
+	<div class="input_field">
+		<input type="code" placeholder="Country Code" id="codeList" list="code" onblur="validate()">
+		<datalist id=code>
+			<option value="India (+91)">
+			<option value="United States (+1)">
+			<option value="United Kingdom (+44)">
+			<option value="Afganistan (+93)">
+			<option value="Australia (+61)">
+			<option value="Bangladesh (+880)">
+			<option value="Cuba (+53)">
+			<option value="France (+33)">
+			<option value="Malaysia (+60)">
+			<option value="New Zealand (+64)">
+			<option value="Pakistan (+92)">
+			<option value="Singapore (+65)">
+			<option value="Srilanka (+94)">
+			<option value="Zimbabwe (+263)">
+		</datalist>
+		<input type="phone" placeholder="Phone" id="phone" onblur="validate()">
+	</div>
+	<div class="input_field">
+		<input type="email" placeholder="Email" id="email" onblur="validate()">
+	</div>
+	<div class="input_field">
+		<textarea placeholder="Message" id="message" onblur="validate()"></textarea>
+	</div>
+	<div class="input_field">
+		<input type="checkbox" id="agree" onblur="validate()">
+			<span class="checkmark"></span>I Agree, for the terms and conditions.
+		</label>
+	</div>
+	<div class="btn">
+		<input type="button" value="Reset Fields" onclick="window.location.reload()">
+		<display: id="error_message">
+	</div>
+</div>
+</form>
+</div>
+</html>
