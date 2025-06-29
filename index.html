@@ -1,67 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>
-		Feedback Form
-	</title>
-	<link rel="stylesheet" href="style.css">
-	<script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1 align="center">Feedback Form</h1>
-	<br>
+
+    <!-- Theme toggle button -->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Feedback form container -->
+    <div class="wrapper">
+        <h1>Feedback Form</h1>
+        <p>Please rate your overall experience:</p>
+
+        <form id="feedbackForm">
+            <!-- Experience rating -->
+            <div class="radio-group">
+                <label class="radio-option">
+                    <input type="radio" name="experience" value="Excellent"> Excellent
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="experience" value="Good"> Good
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="experience" value="Needs Improvement"> Needs Improvement
+                </label>
+            </div>
+
+            <!-- Name input -->
+            <div class="input_field">
+                <input type="text" placeholder="Your Name" id="name">
+            </div>
+
+            <!-- Subject input -->
+            <div class="input_field">
+                <input type="text" placeholder="Feedback Subject" id="subject">
+            </div>
+
+            <!-- Phone number with country code -->
+            <div class="input_field">
+                <div class="phone-group">
+                    <input type="text" placeholder="Country Code" id="codeList" list="code">
+                    <datalist id="code">
+                        <option value="India (+91)">
+                        <option value="United States (+1)">
+                        <option value="United Kingdom (+44)">
+                        <option value="Australia (+61)">
+                        <option value="France (+33)">
+                    </datalist>
+                    <input type="text" placeholder="Phone Number" id="phone">
+                </div>
+            </div>
+
+            <!-- Email input -->
+            <div class="input_field">
+                <input type="email" placeholder="Email Address" id="email">
+            </div>
+
+            <!-- Feedback textarea -->
+            <div class="input_field">
+                <textarea placeholder="Your detailed feedback (minimum 50 characters)" id="message"></textarea>
+            </div>
+
+            <!-- Agreement checkbox -->
+            <div class="checkbox-container">
+                <input type="checkbox" id="agree">
+                <label for="agree">I agree to the terms and conditions</label>
+            </div>
+
+            <!-- Error message -->
+            <div id="error_message"></div>
+        </form>
+    </div>
+
+    <!-- Toast message -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+
 </body>
-<div class="wrapper">
-	<p>Please rate your overall experience with our application as follows:</p>
-	<form>
-	<div class="input_field">
-		<label class="radio-inline"><input type="radio" name="experience" id="Excellent" onblur="validate()"> Excellent</label>
-		<label class="radio-inline"><input type="radio" name="experience" id="Good" onblur="validate()"> Good</label>
-		<label class="radio-inline"><input type="radio" name="experience" id="Needs Improvement" onblur="validate()"> Needs Improvement</label>
-	</div>
-	<div class="input_field">
-		<input type="text" placeholder="Name" id="name" onblur="validate()">
-	</div>
-	<div class="input_field">
-		<input type="text" placeholder="Subject" id="subject" onblur="validate()">
-	</div>
-	<div class="input_field">
-		<input type="code" placeholder="Country Code" id="codeList" list="code" onblur="validate()">
-		<datalist id=code>
-			<option value="India (+91)">
-			<option value="United States (+1)">
-			<option value="United Kingdom (+44)">
-			<option value="Afganistan (+93)">
-			<option value="Australia (+61)">
-			<option value="Bangladesh (+880)">
-			<option value="Cuba (+53)">
-			<option value="France (+33)">
-			<option value="Malaysia (+60)">
-			<option value="New Zealand (+64)">
-			<option value="Pakistan (+92)">
-			<option value="Singapore (+65)">
-			<option value="Srilanka (+94)">
-			<option value="Zimbabwe (+263)">
-		</datalist>
-		<input type="phone" placeholder="Phone" id="phone" onblur="validate()">
-	</div>
-	<div class="input_field">
-		<input type="email" placeholder="Email" id="email" onblur="validate()">
-	</div>
-	<div class="input_field">
-		<textarea placeholder="Message" id="message" onblur="validate()"></textarea>
-	</div>
-	<div class="input_field">
-		<input type="checkbox" id="agree" onblur="validate()">
-			<span class="checkmark"></span>I Agree, for the terms and conditions.
-		</label>
-	</div>
-	<div class="btn">
-		<input type="button" value="Reset Fields" onclick="window.location.reload()">
-		<display: id="error_message">
-	</div>
-</div>
-</form>
-</div>
 </html>
