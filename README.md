@@ -29,8 +29,31 @@ Below are some free and popular services you can connect with:
 ### ✅ [FormSubmit](https://formsubmit.co/)
 Send form submissions directly to your email without any server code.
 
-```html
 <form action="https://formsubmit.co/your_email@example.com" method="POST">
   <input type="text" name="name" required>
   <!-- More inputs -->
 </form>
+
+- **Google Apps Script**: Connect to a Google Sheet or send an email.
+- **Formcarry** (https://formcarry.com/)
+- **Getform** (https://getform.io/)
+- **Formspree** (https://formspree.io/)
+- **EmailJS** (https://www.emailjs.com/) – send emails from the frontend.
+
+> 🔐 Be cautious when handling user data. Never expose API keys or sensitive info in frontend code.
+
+## 📸 Screenshot
+
+![Feedback Form Demo](demo-screenshot.png) <!-- Replace with actual screenshot if available -->
+
+## 🛠️ Requirements
+
+- Modern web browser
+- Internet connection (for Google Fonts)
+
+## 📄 License
+
+This project is open-source and free to use for educational or personal projects.
+
+
+
